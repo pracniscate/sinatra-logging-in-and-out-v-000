@@ -2,7 +2,7 @@ class Helpers
 
   def current_user(hash)
     #use the user_id from the session hash to find the user in the db & return that user
-    @user = User.find_by_id(session[:user_id])
+    @user = User.find_by(session[:user_id])
   end
 
   def is_logged_in?(hash)
